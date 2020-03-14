@@ -8,10 +8,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MomentModule} from 'ngx-moment';
 import {DatePipe} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { NumberCardsComponent } from './components/number-cards/number-cards.component';
+import { MapComponent } from './components/map/map.component';
+import {GoogleChartsModule} from 'angular-google-charts';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NumberCardsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +27,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     HttpClientModule,
     NgxChartsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    GoogleChartsModule.forRoot('AIzaSyCdlCJHpBbmAvm7wgRmzFypgN4gvgD2dOA'),
+    MatProgressSpinnerModule,
+    MatTooltipModule,
+    GoogleChartsModule
   ],
   providers: [
     DatePipe

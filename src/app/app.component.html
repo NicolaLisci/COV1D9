@@ -1,21 +1,21 @@
-<!--<ngx-charts-pie-grid-->
-<!--  [view]="view"-->
-<!--  [scheme]="colorScheme"-->
-<!--  [results]="single"-->
-<!--  (select)="onSelect($event)">-->
-<!--</ngx-charts-pie-grid>-->
-
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
     <span>COV1D9</span>
   </mat-toolbar-row>
-<div class="container">
+</mat-toolbar>
 
-  <ngx-charts-number-card
-    [view]="view"
-    [scheme]="colorScheme"
-    [results]="single"
-    [cardColor]="cardColor"
-    (select)="onSelect($event)">
-  </ngx-charts-number-card>
+<div class="page">
+  <div class="container">
+    <div class="spinner-container" *ngIf="showSpinner">
+      <mat-spinner [diameter]="120" [mode]=""></mat-spinner>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner"></app-number-cards>
+      </div>
+      <div class="col-12">
+        <app-map></app-map>
+      </div>
+    </div>
+  </div>
 </div>

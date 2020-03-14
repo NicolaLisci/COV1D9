@@ -1,19 +1,30 @@
-.container {
+.spinner-container {
   display: flex;
   justify-content: center;
+  margin-top: 50%;
 }
 
-::ng-deep .ngx-charts {
-  .cell {
-    //fill: #fff !important;
-    font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+.page {
+  background: #172142;
+}
 
+::ng-deep {
+  .mat-toolbar {
+    background: #172142 !important;
+    border-bottom: solid 3px white;
   }
-  //.card{
-  //  border-radius: 20px !important;
-  //}
+
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+  }
+
 }
 
 body {
   font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  background: #172142;
+}
+
+span {
+  color: white !important;
 }
