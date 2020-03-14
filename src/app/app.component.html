@@ -1,0 +1,21 @@
+<!--<ngx-charts-pie-grid-->
+<!--  [view]="view"-->
+<!--  [scheme]="colorScheme"-->
+<!--  [results]="single"-->
+<!--  (select)="onSelect($event)">-->
+<!--</ngx-charts-pie-grid>-->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>COV1D9</span>
+  </mat-toolbar-row>
+<div class="container">
+
+  <ngx-charts-number-card
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="single"
+    [cardColor]="cardColor"
+    (select)="onSelect($event)">
+  </ngx-charts-number-card>
+</div>
