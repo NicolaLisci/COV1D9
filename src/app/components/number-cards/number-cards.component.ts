@@ -27,4 +27,6 @@ export class NumberCardsComponent implements OnInit {
   onSelect($event: any) {
     console.log($event);
   }
+
+
 }

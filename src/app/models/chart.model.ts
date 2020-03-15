@@ -10,6 +10,7 @@ export interface Option {
   datalessRegionColor: string;
   backgroundColor: string;
   colorAxis: ColorAxis;
+  dynamicResize : boolean;
 }
 
 export interface ColorAxis {

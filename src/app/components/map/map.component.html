@@ -9,12 +9,12 @@
 <!--</google-chart>-->
 
 
-<div *ngIf="chart && chart.data">
-  <google-chart class="chart"
-                [height]="650"
-                [type]="chart.type"
-                [data]="chart.data"
-                [options]="chart.options"
+<div *ngIf="chartData && chartData.data">
+  <google-chart #chart class="chart"
+                [dynamicResize]="true"
+                [type]="chartData.type"
+                [data]="chartData.data"
+                [options]="chartData.options"
                 (select)="onSelect($event)">
   </google-chart>
 </div>

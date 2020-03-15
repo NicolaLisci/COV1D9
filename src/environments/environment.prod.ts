@@ -5,5 +5,6 @@ export const environment = {
     daily: '/andamento',
     regioni: '/regioni',
     province: '/province',
+    map: '/map',
   }
 };
