@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   public chartData: any[];
   @Output() dataTypeToVisualize = new EventEmitter();
   public promptEvent: any;
+  public showChart: boolean;
 
 
   constructor(
@@ -73,5 +74,11 @@ export class AppComponent implements OnInit {
 
   updateChart($event: any) {
     this.dataTypeToVisualize.emit($event.name);
+  }
+
+  mapLoaded($event: any) {
+    setTimeout(() => {
+      this.showChart = $event;
+    }, 2000);
   }
 }

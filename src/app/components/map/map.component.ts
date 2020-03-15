@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ApiService} from '../../services/api.service';
 import {UtilsService} from '../../services/utils.service';
 import {Chart} from '../../models/chart.model';
@@ -25,6 +25,8 @@ export class MapComponent implements OnInit, AfterViewInit {
   @Input() dataTypeToVisualize = new EventEmitter();
   public columnNames = ['Regioni', RegionFields.guariti];
   private colors: string[];
+  public dataType: string;
+  @Output() showMap = new EventEmitter();
 
   constructor(
     private apiService: ApiService,
@@ -38,19 +40,19 @@ export class MapComponent implements OnInit, AfterViewInit {
     this.colors = ['#FFFFFF', RegionFieldsColor.guariti];
 
     this.todayDate = this.utilsService.getLastRecord();
-    const dataType = this.getEnumKeyByEnumValue(RegionFields, this.dataToVisualize);
-    this.drawPointsOnMap(dataType);
+    this.dataType = this.getEnumKeyByEnumValue(RegionFields, this.dataToVisualize);
+    this.drawPointsOnMap(this.dataType);
 
     this.dataTypeToVisualize.subscribe((res) => {
-      let dataType = this.getEnumKeyByEnumValue(RegionFields, res);
-      if (!dataType) {
+      this.dataType = this.getEnumKeyByEnumValue(RegionFields, res);
+      if (!this.dataType) {
         this.matSnackBar.open('Al momento questi dati non sono disponibili!', 'Esci', {
           duration: 2000,
         });
       }
 
       this.columnNames = ['Regioni', res];
-      this.drawPointsOnMap(dataType);
+      this.drawPointsOnMap(this.dataType);
     });
   }
 
@@ -91,6 +93,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
       this.colors = ['#FFFFFF', RegionFieldsColor[dataType]];
       this.chartData = this.setChart(this.data, this.colors);
+      this.showMap.emit(true);
     });
   }
 

@@ -1,14 +1,3 @@
-<!--<google-chart #chart-->
-<!--              [title]="title"-->
-<!--              [type]="type"-->
-<!--              [data]="data"-->
-<!--              [columnNames]="columnNames"-->
-<!--              [options]="options"-->
-<!--              [dynamicResize]="dynamicResize"-->
-<!--              style="width: 100%; height: 100%;">-->
-<!--</google-chart>-->
-
-
 <div *ngIf="chartData && chartData.data">
   <google-chart #chart class="chart"
                 [dynamicResize]="true"
@@ -16,6 +5,7 @@
                 [data]="chartData.data"
                 [columnNames]="columnNames"
                 [options]="chartData.options"
+                [title]="dataType"
                 (select)="onSelect($event)">
   </google-chart>
 </div>

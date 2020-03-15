@@ -10,12 +10,12 @@
     <div class="spinner-container" *ngIf="showSpinner">
       <mat-spinner [diameter]="120"></mat-spinner>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner" (changeMapData)="updateChart($event)"></app-number-cards>
+    <div class="container-home">
+      <div class="element">
+        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner && showChart" (changeMapData)="updateChart($event)"></app-number-cards>
       </div>
-      <div class="col-12">
-        <app-map [dataTypeToVisualize]="dataTypeToVisualize"></app-map>
+      <div class="element">
+        <app-map [dataTypeToVisualize]="dataTypeToVisualize" (showMap)="mapLoaded($event)"></app-map>
       </div>
     </div>
   </div>

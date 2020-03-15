@@ -24,10 +24,7 @@
     "@angular/service-worker": "~9.0.6",
     "@swimlane/ngx-charts": "^13.0.2",
     "angular-google-charts": "^0.1.6",
-    "bootstrap": "^4.4.1",
     "http-server": "^0.12.1",
-    "moment": "^2.24.0",
-    "ngx-moment": "^3.5.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
