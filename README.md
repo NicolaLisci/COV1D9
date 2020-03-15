@@ -2,9 +2,9 @@
 
 Angular App to monitor COVID-19 virus in italy
 
-This App use [COVID19Feed2Json] API (https://github.com/alessiodl/COVID19Feed2Json)
+This App use [COVID19Feed2Json](https://github.com/alessiodl/COVID19Feed2Json) API
 
-All information comes from [Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri] (http://www.protezionecivile.gov.it/)
+All information comes from [Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri](http://www.protezionecivile.gov.it/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
