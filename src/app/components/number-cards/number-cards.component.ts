@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class NumberCardsComponent implements OnInit {
 
-  public cardColor = '#172142';
+  public cardColor = '#FFFFFF';
   public colorScheme = {
     domain: ['#5AA454', '#E44D25', '#44BBA4', '#7aa3e5', '#a8385d', '#8963BA', '#FED02F', '#90949A', '#AF9B46', '#000000']
   };

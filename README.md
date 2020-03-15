@@ -1,5 +1,7 @@
 # COV1D9
 
+[DEMO](https://cov1d9.firebaseapp.com/)
+
 Angular App to monitor COVID-19 virus in italy
 
 This App use [COVID19Feed2Json](https://github.com/alessiodl/COVID19Feed2Json) API
@@ -7,7 +9,6 @@ This App use [COVID19Feed2Json](https://github.com/alessiodl/COVID19Feed2Json) A
 All information comes from [Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri](http://www.protezionecivile.gov.it/)
 
 
-[DEMO](https://cov1d9.firebaseapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 

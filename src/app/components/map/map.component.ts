@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {ApiService} from '../../services/api.service';
 import {UtilsService} from '../../services/utils.service';
 import {Chart} from '../../models/chart.model';
