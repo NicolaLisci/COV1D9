@@ -1,4 +1,4 @@
-.title{
+.title {
   color: white;
 }
 
@@ -12,7 +12,7 @@
   background: #172142;
 }
 
-.mat-toolbar-container{
+.mat-toolbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,16 +29,26 @@
     stroke: white;
   }
 
-  .mat-button-wrapper{
+  .mat-button-wrapper {
     color: #172142;
   }
 
 }
 
 
-.container-home{
+.container-home {
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: column-reverse;
+  align-items: center;
+  flex-direction: column;
+}
+
+.element-chart {
+  width: 90%;
+}
+
+.element{
+  margin: 5%;
+  width: 90%;
 }

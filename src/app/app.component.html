@@ -12,10 +12,10 @@
     </div>
     <div class="container-home">
       <div class="element">
-        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner && showChart" (changeMapData)="updateChart($event)"></app-number-cards>
-      </div>
-      <div class="element">
         <app-map [dataTypeToVisualize]="dataTypeToVisualize" (showMap)="mapLoaded($event)"></app-map>
+      </div>
+      <div class="element-chart">
+        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner && showChart" (changeMapData)="updateChart($event)"></app-number-cards>
       </div>
     </div>
   </div>
