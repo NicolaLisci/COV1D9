@@ -13,6 +13,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { NumberCardsComponent } from './components/number-cards/number-cards.component';
 import { MapComponent } from './components/map/map.component';
 import {GoogleChartsModule} from 'angular-google-charts';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {GoogleChartsModule} from 'angular-google-charts';
     GoogleChartsModule.forRoot('AIzaSyCdlCJHpBbmAvm7wgRmzFypgN4gvgD2dOA'),
     MatProgressSpinnerModule,
     MatTooltipModule,
-    GoogleChartsModule
+    MatSnackBarModule
   ],
   providers: [
     DatePipe

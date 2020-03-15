@@ -26,3 +26,5 @@ export enum DailyLabel {
   totale_casi = 'Totale casi',
   totale_ospedalizzati = 'Totale ospedalizzati',
 }
+
+

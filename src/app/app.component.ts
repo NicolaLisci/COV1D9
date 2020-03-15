@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ApiService} from './services/api.service';
 import {Daily, DailyLabel} from './models/daily-model';
 import {UtilsService} from './services/utils.service';
@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   public todayDate: string;
   public showSpinner = true;
   public chartData: any[];
+  @Output() dataTypeToVisualize = new EventEmitter();
+
 
   constructor(
     private apiService: ApiService,
@@ -58,4 +60,7 @@ export class AppComponent implements OnInit {
     this.chartData = chartArray;
   }
 
+  updateChart($event: any) {
+    this.dataTypeToVisualize.emit($event.name);
+  }
 }
