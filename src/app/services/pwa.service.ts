@@ -3,7 +3,7 @@ import {SwUpdate} from '@angular/service-worker';
 
 @Injectable()
 export class PwaService {
-  public promptEvent: Event;
+  public promptEvent: any;
 
   constructor(private swUpdate: SwUpdate) {
     window.addEventListener('beforeinstallprompt', event => {

@@ -1,3 +1,7 @@
+.title{
+  color: white;
+}
+
 .spinner-container {
   display: flex;
   justify-content: center;
@@ -7,6 +11,13 @@
 .page {
   background: #172142;
 }
+
+.mat-toolbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 ::ng-deep {
   .mat-toolbar {
@@ -18,13 +29,8 @@
     stroke: white;
   }
 
-}
+  .mat-button-wrapper{
+    color: #172142;
+  }
 
-body {
-  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
-  background: #172142;
-}
-
-span {
-  color: white !important;
 }

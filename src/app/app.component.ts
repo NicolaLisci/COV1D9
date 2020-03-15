@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   public showSpinner = true;
   public chartData: any[];
   @Output() dataTypeToVisualize = new EventEmitter();
-  private promptEvent: Event;
+  public promptEvent: any;
 
 
   constructor(
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     window.addEventListener('beforeinstallprompt', event => {
+      console.log(event);
       this.promptEvent = event;
     });
 

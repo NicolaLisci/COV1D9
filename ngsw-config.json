@@ -5,16 +5,25 @@
     {
       "name": "app",
       "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
         "files": [
           "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
-          "/*.css",
-          "/*.js"
+          "/*.scss",
+          "/*.js",
+          "/pwa-manifest.json",
+          "/assets/images/favicons/favicon.ico",
+          "/assets/js/*.js",
+          "!/*-es5*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
@@ -25,5 +34,20 @@
         ]
       }
     }
+  ],
+  "dataGroups": [{
+    "name": "api-freshness",
+    "urls": [ "https://cov1d9.firebaseapp.com" ],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 5,
+      "maxAge": "1h",
+      "timeout": "3s"
+    }
+  }],
+  "navigationUrls": [
+    "/**"
   ]
 }
+
+
