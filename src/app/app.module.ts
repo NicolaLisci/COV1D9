@@ -14,6 +14,9 @@ import { NumberCardsComponent } from './components/number-cards/number-cards.com
 import { MapComponent } from './components/map/map.component';
 import {GoogleChartsModule} from 'angular-google-charts';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import {PwaService} from './services/pwa.service';
 
 @NgModule({
   declarations: [
@@ -32,10 +35,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     GoogleChartsModule.forRoot('AIzaSyCdlCJHpBbmAvm7wgRmzFypgN4gvgD2dOA'),
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    DatePipe
+    DatePipe,
+    PwaService
   ],
   bootstrap: [AppComponent]
 })

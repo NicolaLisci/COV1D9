@@ -1,0 +1,16 @@
+{
+  "name": "COV1D9",
+  "short_name": "COV1D9",
+  "theme_color": "#1976d2",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/cov1d-icon-app.png",
+      "sizes": "590x590",
+      "type": "image/png"
+    },
+  ]
+}

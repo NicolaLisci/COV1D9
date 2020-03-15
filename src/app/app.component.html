@@ -1,6 +1,9 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <span>COV1D9</span>
+    <button *ngIf="promptEvent" (click)="installPwa()">
+      Install
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 

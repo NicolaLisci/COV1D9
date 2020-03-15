@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ApiService} from './services/api.service';
 import {Daily, DailyLabel} from './models/daily-model';
 import {UtilsService} from './services/utils.service';
+import {PwaService} from './services/pwa.service';
 
 @Component({
   selector: 'app-root',
@@ -15,19 +16,28 @@ export class AppComponent implements OnInit {
   public showSpinner = true;
   public chartData: any[];
   @Output() dataTypeToVisualize = new EventEmitter();
+  private promptEvent: Event;
 
 
   constructor(
     private apiService: ApiService,
-    private utilsService: UtilsService
+    private utilsService: UtilsService,
+    private pwaService: PwaService
   ) {
   }
 
   ngOnInit(): void {
+    window.addEventListener('beforeinstallprompt', event => {
+      this.promptEvent = event;
+    });
 
     this.todayDate = this.utilsService.getLastRecord();
     this.getDailyRecords();
 
+  }
+
+  installPwa(): void {
+    this.pwaService.promptEvent.prompt();
   }
 
   getDailyRecords() {
