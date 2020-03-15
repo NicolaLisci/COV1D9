@@ -6,6 +6,9 @@ This App use [COVID19Feed2Json](https://github.com/alessiodl/COVID19Feed2Json) A
 
 All information comes from [Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri](http://www.protezionecivile.gov.it/)
 
+
+[DEMO](https://cov1d9.firebaseapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
