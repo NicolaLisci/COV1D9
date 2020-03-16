@@ -11,6 +11,8 @@
   },
   "private": true,
   "dependencies": {
+    "@amcharts/amcharts4": "^4.9.9",
+    "@amcharts/amcharts4-geodata": "^4.1.12",
     "@angular/animations": "~9.0.6",
     "@angular/cdk": "^9.1.2",
     "@angular/common": "~9.0.6",
@@ -24,6 +26,7 @@
     "@angular/service-worker": "~9.0.6",
     "@swimlane/ngx-charts": "^13.0.2",
     "angular-google-charts": "^0.1.6",
+    "d3": "^5.15.0",
     "http-server": "^0.12.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

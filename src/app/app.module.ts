@@ -22,6 +22,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { ItalyComponent } from './components/italy/italy.component';
 import { WorldComponent } from './components/world/world.component';
+import { GlobeComponent } from './components/globe/globe.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { WorldComponent } from './components/world/world.component';
     MapComponent,
     MenuComponent,
     ItalyComponent,
-    WorldComponent
+    WorldComponent,
+    GlobeComponent
   ],
   imports: [
     BrowserModule,
