@@ -54,11 +54,11 @@ export enum RegionFields {
 
 export enum RegionFieldsColor {
   guariti = '#5AA454',
-  deceduti = '#E44D25',
+  deceduti = '#FF0000',
   isolamento_domiciliare = '#44BBA4',
   numero_casi = '#AF9B46',
   ricoverati_con_sintomi = '#a8385d',
-  tamponi = '#000000',
+  tamponi = '#E44D25',
   terapia_intensiva = '#8963BA',
   totale_positivi = '#90949A'
 }

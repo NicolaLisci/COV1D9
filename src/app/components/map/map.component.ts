@@ -1,17 +1,20 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ApiService} from '../../services/api.service';
 import {UtilsService} from '../../services/utils.service';
-import {Chart} from '../../models/chart.model';
+import {Chart} from '../../models/italy/chart.model';
 import {ChartEvent} from 'angular-google-charts';
-import {RegionFields, RegionFieldsColor} from '../../models/regioni.model';
+import {RegionFields, RegionFieldsColor} from '../../models/italy/regioni.model';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {ActivatedRoute, Router} from '@angular/router';
+import {environment} from '../../../environments/environment';
+import {WorldLabels} from '../../models/world/world.model';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit, AfterViewInit {
+export class MapComponent implements OnInit {
 
   public todayDate: string;
 
@@ -20,28 +23,51 @@ export class MapComponent implements OnInit, AfterViewInit {
   private features = [];
   public chartData: any = null;
   public data = [];
-  public dataToVisualize = RegionFields.guariti;
+  public dataToVisualizeItaly = RegionFields.guariti;
+  public dataToVisualizeWorld = WorldLabels.active;
 
   @Input() dataTypeToVisualize = new EventEmitter();
-  public columnNames = ['Regioni', RegionFields.guariti];
+  public columnNames;
   private colors: string[];
   public dataType: string;
-  @Output() showMap = new EventEmitter();
+  @Output() showMapItaly = new EventEmitter();
+  @Output() showMapWorld = new EventEmitter();
+
+  public activePage: string;
 
   constructor(
     private apiService: ApiService,
     private utilsService: UtilsService,
-    private matSnackBar: MatSnackBar
+    private matSnackBar: MatSnackBar,
+    private activatedRoute: ActivatedRoute
   ) {
   }
 
   ngOnInit(): void {
 
+    this.activatedRoute.url.subscribe((res: any) => {
+      this.activePage = res[0].path;
+    });
+
+    if (this.activePage === environment.paths.italy) {
+      console.log('Italy');
+      this.initItalyMap();
+    } else {
+      console.log('WOrld');
+      this.initWorldMap();
+    }
+
+  }
+
+
+  initItalyMap() {
     this.colors = ['#FFFFFF', RegionFieldsColor.guariti];
 
+    this.columnNames = ['Regioni', RegionFields.guariti];
     this.todayDate = this.utilsService.getLastRecord();
-    this.dataType = this.getEnumKeyByEnumValue(RegionFields, this.dataToVisualize);
-    this.drawPointsOnMap(this.dataType);
+
+    this.dataType = this.getEnumKeyByEnumValue(RegionFields, this.dataToVisualizeItaly);
+    this.drawPointsOnItalyMap(this.dataType);
 
     this.dataTypeToVisualize.subscribe((res) => {
       this.dataType = this.getEnumKeyByEnumValue(RegionFields, res);
@@ -52,22 +78,25 @@ export class MapComponent implements OnInit, AfterViewInit {
       }
 
       this.columnNames = ['Regioni', res];
-      this.drawPointsOnMap(this.dataType);
+      this.drawPointsOnItalyMap(this.dataType);
     });
   }
 
-  ngAfterViewInit(): void {
-
+  initWorldMap() {
+    this.colors = ['#FFFFFF', RegionFieldsColor.guariti];
+    this.columnNames = ['Stati', WorldLabels.active];
+    this.dataType = this.getEnumKeyByEnumValue(WorldLabels, this.dataToVisualizeWorld);
+    this.drawPointsOnWorldMap(this.dataType);
   }
 
-  setChart(data: any, colors: string[]): Chart {
+  setChart(data: any, colors: string[], region: string, displayMode: string): Chart {
     const mychart: Chart = {
       type: 'GeoChart',
       data,
       options: {
-        region: 'IT',
-        displayMode: 'markers',
-        colorAxis: {colors: colors},
+        region,
+        displayMode,
+        colorAxis: {colors},
         backgroundColor: '#172142',
         datalessRegionColor: 'white',
         dynamicResize: true
@@ -80,7 +109,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   onSelect($event: ChartEvent) {
   }
 
-  drawPointsOnMap(dataType) {
+  drawPointsOnItalyMap(dataType) {
     this.data = [];
     this.apiService.getRegionsData(this.todayDate).subscribe((res: any) => {
       this.features = res.features;
@@ -91,9 +120,9 @@ export class MapComponent implements OnInit, AfterViewInit {
         this.data.push(regionArray);
       });
 
-      this.colors = ['#FFFFFF', RegionFieldsColor[dataType]];
-      this.chartData = this.setChart(this.data, this.colors);
-      this.showMap.emit(true);
+      this.colors = ['#000000', RegionFieldsColor[dataType]];
+      this.chartData = this.setChart(this.data, this.colors, 'IT', 'markers');
+      this.showMapItaly.emit(true);
     });
   }
 
@@ -101,5 +130,26 @@ export class MapComponent implements OnInit, AfterViewInit {
     const keys = Object.keys(myEnum).filter(x => myEnum[x] === enumValue);
     return keys.length > 0 ? keys[0] : null;
   }
+
+  drawPointsOnWorldMap(dataType) {
+    this.data = [];
+
+    this.apiService.getCountriesData().subscribe((res: []) => {
+      res.forEach((country: any) => {
+
+        const countriesArray = [];
+        countriesArray.push(country.countryRegion);
+        countriesArray.push(country[dataType]);
+        this.data.push(countriesArray);
+      });
+
+      console.log(this.data);
+    });
+
+    this.colors = ['#5AA454', '#FFFF00', '#FF0000'];
+    this.chartData = this.setChart(this.data, this.colors, null, 'region');
+    this.showMapWorld.emit(true);
+  }
+
 
 }

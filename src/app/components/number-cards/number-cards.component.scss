@@ -1,20 +1,5 @@
-.aspect-ratio-container {
-  width: 100% !important;
-  height: 500px;
-}
-
-@media screen and (max-width: 600px) {
-  .aspect-ratio-container {
-    width: 100% !important;
-    height: 500px;
-    margin-left: 2%;
-  }
-
-}
 
 ::ng-deep {
-
-
   .ngx-charts {
     .cell {
       font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
@@ -27,5 +12,18 @@
     rect{
       border: solid 3px white;
     }
+  }
+}
+
+.aspect-ratio-container {
+  width: 100% !important;
+  height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .aspect-ratio-container {
+    width: 100% !important;
+    height: 500px;
+    margin-left: 2%;
   }
 }

@@ -2,21 +2,7 @@
   <mat-toolbar-row class="mat-toolbar-container">
     <span class="title">COV1D9</span>
     <button mat-flat-button *ngIf="promptEvent" (click)="installPwa()" >Installa</button>
+    <app-menu></app-menu>
   </mat-toolbar-row>
 </mat-toolbar>
-
-<div class="page">
-  <div class="container">
-    <div class="spinner-container" *ngIf="showSpinner">
-      <mat-spinner [diameter]="120"></mat-spinner>
-    </div>
-    <div class="container-home">
-      <div class="element">
-        <app-map [dataTypeToVisualize]="dataTypeToVisualize" (showMap)="mapLoaded($event)"></app-map>
-      </div>
-      <div class="element-chart">
-        <app-number-cards [chartData]="chartData" *ngIf="!showSpinner && showChart" (changeMapData)="updateChart($event)"></app-number-cards>
-      </div>
-    </div>
-  </div>
-</div>
+<router-outlet></router-outlet>

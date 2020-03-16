@@ -1,0 +1,11 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon class="menu-icon">more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/italy">
+    <span>Italy</span>
+  </button>
+  <button mat-menu-item routerLink="/world">
+    <span>World</span>
+  </button>
+</mat-menu>

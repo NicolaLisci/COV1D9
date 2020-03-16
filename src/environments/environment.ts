@@ -4,20 +4,26 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://covid19-it-api.herokuapp.com',
-  endpoints: {
-    daily: '/andamento',
-    regioni: '/regioni',
-    province: '/province',
-    map: '/map',
+  paths: {
+    italy: 'italy',
+    world: 'world',
+  },
+  API: {
+    italy: {
+      baseUrl: 'https://covid19-it-api.herokuapp.com',
+      endpoints: {
+        daily: '/andamento',
+        regioni: '/regioni',
+        province: '/province',
+        map: '/map',
+      }
+    },
+    world: {
+      baseUrl: 'https://covid19.mathdro.id/api',
+      endpoints: {
+        all: '',
+        countries: '/confirmed',
+      }
+    }
   }
 };
-
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.

@@ -1,0 +1,36 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50%;
+}
+
+.container-home {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.element-chart {
+  width: 90%;
+}
+
+.element{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 90%;
+}
+
+::ng-deep {
+
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+  }
+
+  .mat-button-wrapper {
+    color: #172142;
+  }
+}
+
+
