@@ -15,10 +15,10 @@ export const environment = {
       }
     },
     world: {
-      baseUrl: 'https://coronavirus-19-api.herokuapp.com',
+      baseUrl: 'https://covid19.mathdro.id/api',
       endpoints: {
-        all: '/all',
-        countries: '/countries',
+        all: '',
+        countries: '/confirmed',
       }
     }
   }

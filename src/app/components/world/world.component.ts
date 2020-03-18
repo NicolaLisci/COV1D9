@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 import {ApiService} from '../../services/api.service';
 import {Country, WorldData, WorldLabels} from '../../models/world/world.model';
 
@@ -17,6 +17,8 @@ export class WorldComponent implements OnInit {
   public worldData = new WorldData();
   showChart = true;
   private countriesData: Country[];
+  public innerHeight: number;
+  public innerWidth: number;
 
   constructor(
     private apiService: ApiService
@@ -25,26 +27,28 @@ export class WorldComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log('OnInit');
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
+
     this.apiService.getCountriesData().subscribe((res: Country[]) => {
       this.countriesData = res;
     });
-
-    this.apiService.getWorldData().subscribe((res: any) => {
-      this.worldData.confirmed = res.confirmed.value;
-      this.worldData.deaths = res.deaths.value;
-      this.worldData.recovered = res.recovered.value;
-      this.setDataToChart(this.worldData);
-    });
-
-  }
-
-  mapLoaded($event: any) {
-    setTimeout(() => {
-      this.showChart = $event;
-    }, 1000);
+    //
+    // this.apiService.getWorldData().subscribe((res: any) => {
+    //   this.worldData.confirmed = res.confirmed.value;
+    //   this.worldData.deaths = res.deaths.value;
+    //   this.worldData.recovered = res.recovered.value;
+    //   this.setDataToChart(this.worldData);
+    // });
 
   }
+
+  // mapLoaded($event: any) {
+  //   setTimeout(() => {
+  //     this.showChart = $event;
+  //   }, 1000);
+  //
+  // }
 
   getWorldRecords() {
     // this.apiService.getWorldData().subscribe((res: Country[]) => {
@@ -79,5 +83,11 @@ export class WorldComponent implements OnInit {
 
   updateChart($event: any) {
 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    this.innerHeight = window.innerHeight;
   }
 }

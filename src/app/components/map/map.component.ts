@@ -50,10 +50,8 @@ export class MapComponent implements OnInit {
     });
 
     if (this.activePage === environment.paths.italy) {
-      console.log('Italy');
       this.initItalyMap();
     } else {
-      console.log('WOrld');
       this.initWorldMap();
     }
 
@@ -143,7 +141,6 @@ export class MapComponent implements OnInit {
         this.data.push(countriesArray);
       });
 
-      console.log(this.data);
     });
 
     this.colors = ['#5AA454', '#FFFF00', '#FF0000'];

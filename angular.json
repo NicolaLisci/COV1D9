@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush"
         }
       },
       "root": "",
@@ -33,6 +34,10 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "src/app/planetaryjs/planetaryjs.js",
+              "src/app/planetaryjs/d3.v3.min.js",
+              "src/app/planetaryjs/topojson.v1.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {

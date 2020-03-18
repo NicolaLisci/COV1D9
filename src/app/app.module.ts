@@ -9,20 +9,22 @@ import {DatePipe} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { NumberCardsComponent } from './components/number-cards/number-cards.component';
-import { MapComponent } from './components/map/map.component';
+import {NumberCardsComponent} from './components/number-cards/number-cards.component';
+import {MapComponent} from './components/map/map.component';
 import {GoogleChartsModule} from 'angular-google-charts';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
 import {PwaService} from './services/pwa.service';
 import {MatButtonModule} from '@angular/material/button';
-import { MenuComponent } from './components/menu/menu.component';
+import {MenuComponent} from './components/menu/menu.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import { ItalyComponent } from './components/italy/italy.component';
-import { WorldComponent } from './components/world/world.component';
-import { GlobeComponent } from './components/globe/globe.component';
+import {ItalyComponent} from './components/italy/italy.component';
+import {WorldComponent} from './components/world/world.component';
+import {GlobeComponent} from './components/globe/globe.component';
+import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { GlobeComponent } from './components/globe/globe.component';
     MenuComponent,
     ItalyComponent,
     WorldComponent,
-    GlobeComponent
+    GlobeComponent,
+    BottomSheetComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { GlobeComponent } from './components/globe/globe.component';
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     MatButtonModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [
     DatePipe,
