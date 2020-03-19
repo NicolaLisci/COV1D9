@@ -1,5 +1,7 @@
-import {Component, OnInit, ChangeDetectionStrategy, Inject} from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy, Inject, OnDestroy} from '@angular/core';
 import {MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import {Observable} from 'rxjs';
+import {Daily, DailyLabel} from '../../models/italy/daily-model';
 
 @Component({
   selector: 'app-bottom-sheet',
@@ -7,18 +9,55 @@ import {MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef} from '@angular/material/bottom
   styleUrls: ['./bottom-sheet.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BottomSheetComponent implements OnInit {
+export class BottomSheetComponent implements OnInit, OnDestroy {
+  public numberCardData: any;
 
   constructor(
     private bottomSheetRef: MatBottomSheetRef<BottomSheetComponent>,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.numberCardData = [
+      {
+        name: 'Confermati',
+        value: this.data.confirmed
+      },
+      {
+        name: 'Guariti',
+        value: this.data.recovered
+      },
+      {
+        name: 'Deceduti',
+        value: this.data.deaths
+      },
+      {
+        name: 'Positivi',
+        value: this.data.active
+      },
+    ];
+
   }
+
+  // setDataToChart(dailyRecord: Daily) {
+  //   const chartArray = [];
+  //   Object.keys(dailyRecord).forEach(key => {
+  //     const record = {
+  //       name: DailyLabel[key],
+  //       value: dailyRecord[key]
+  //     };
+  //     chartArray.push(record);
+  //   });
+  //   this.chartData = chartArray;
+  // }
 
   openLink(event: MouseEvent): void {
     this.bottomSheetRef.dismiss();
     event.preventDefault();
   }
+
+
+  ngOnDestroy() {
+  }
+
 }

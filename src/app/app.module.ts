@@ -23,8 +23,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {ItalyComponent} from './components/italy/italy.component';
 import {WorldComponent} from './components/world/world.component';
 import {GlobeComponent} from './components/globe/globe.component';
-import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.component';
+import {BottomSheetComponent} from './components/bottom-sheet/bottom-sheet.component';
 import {MatListModule} from '@angular/material/list';
+import {LoadCirclePipe} from './pipes/load-circle.pipe';
+import {NgCircleProgressModule} from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import {MatListModule} from '@angular/material/list';
     WorldComponent,
     GlobeComponent,
     BottomSheetComponent,
+    LoadCirclePipe,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import {MatListModule} from '@angular/material/list';
     AppRoutingModule,
     HttpClientModule,
     NgxChartsModule,
+    NgCircleProgressModule.forRoot({}),
     MatToolbarModule,
     GoogleChartsModule.forRoot(''),
     MatProgressSpinnerModule,
