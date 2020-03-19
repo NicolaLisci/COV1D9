@@ -68,11 +68,10 @@ export class GlobeComponent implements OnInit, AfterViewInit, OnDestroy {
     const arrayLocations = [];
     this.apiService.getCountriesData().subscribe((res: any[]) => {
       this.worldDataArray = res;
-
       res.forEach((country: any) => {
         arrayLocations.push(new Location(country.countryRegion, country.lat, country.long));
       });
-      this.worldDataArrayLocations = _.uniqBy(arrayLocations.reverse(), (o) => {
+      this.worldDataArrayLocations = _.uniqBy(arrayLocations, (o) => {
         return o.name;
       });
       this.zone.runOutsideAngular(() => {

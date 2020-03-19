@@ -1,8 +1,8 @@
-<mat-toolbar>
-  <mat-toolbar-row class="mat-toolbar-container">
+<mat-toolbar class="mat-toolbar-container">
+  <mat-toolbar-row class="mat-toolbar-row">
     <span class="title">COV1D9</span>
-    <button mat-flat-button *ngIf="promptEvent" (click)="installPwa()" >Installa</button>
-    <app-menu class="menu"></app-menu>
+    <button mat-flat-button *ngIf="pwaService.promptEvent" (click)="installPwa()" >Installa</button>
+<!--    <app-menu class="menu"></app-menu>-->
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

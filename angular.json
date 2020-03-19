@@ -31,12 +31,14 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/addtohomescreen.css",
               "src/styles.scss"
             ],
             "scripts": [
               "src/app/planetaryjs/planetaryjs.js",
               "src/app/planetaryjs/d3.v3.min.js",
               "src/app/planetaryjs/topojson.v1.min.js",
+              "src/assets/addtohomescreen.js",
               "node_modules/jquery/dist/jquery.min.js"
             ]
           },

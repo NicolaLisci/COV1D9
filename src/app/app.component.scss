@@ -1,23 +1,37 @@
 .title {
   color: white;
-  margin-top: 6%;
   font-size: 60px;
-  height: 60px;
 }
 
 .page {
   background: #172142;
 }
 
+@media screen and (max-width: 600px) {
+  .mat-toolbar-container {
+    height: 50px !important;
+    padding: 1%;
+    margin: 2%;
+  }
+  .title {
+    color: white;
+    font-size: 60px;
+  }
+}
+
 .mat-toolbar-container {
-  margin-top: 1%;
-  margin-left: 1%;
+  height: 30px !important;
+  margin: 1%;
+}
+
+
+.mat-toolbar-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.menu{
+.menu {
   margin: 2%;
 }
 

@@ -35,7 +35,7 @@ import {MatListModule} from '@angular/material/list';
     ItalyComponent,
     WorldComponent,
     GlobeComponent,
-    BottomSheetComponent
+    BottomSheetComponent,
   ],
   imports: [
     BrowserModule,

@@ -33,39 +33,6 @@ export class WorldComponent implements OnInit {
     this.apiService.getCountriesData().subscribe((res: Country[]) => {
       this.countriesData = res;
     });
-    //
-    // this.apiService.getWorldData().subscribe((res: any) => {
-    //   this.worldData.confirmed = res.confirmed.value;
-    //   this.worldData.deaths = res.deaths.value;
-    //   this.worldData.recovered = res.recovered.value;
-    //   this.setDataToChart(this.worldData);
-    // });
-
-  }
-
-  // mapLoaded($event: any) {
-  //   setTimeout(() => {
-  //     this.showChart = $event;
-  //   }, 1000);
-  //
-  // }
-
-  getWorldRecords() {
-    // this.apiService.getWorldData().subscribe((res: Country[]) => {
-    //   res.forEach((country) => {
-    //     const worldRecord = new Country();
-    //     worldRecord.active = country.active;
-    //     worldRecord.cases = country.cases;
-    //     worldRecord.critical = country.critical;
-    //     worldRecord.deaths = country.deaths;
-    //     worldRecord.recovered = country.recovered;
-    //     worldRecord.todayCases = country.todayCases;
-    //     worldRecord.todayDeaths = country.todayDeaths;
-    //   });
-    //
-    //   this.setDataToChart(worldRecord);
-    //   this.showSpinner = false;
-    // });
   }
 
   setDataToChart(worldData: WorldData) {
@@ -81,9 +48,6 @@ export class WorldComponent implements OnInit {
     return this.chartData;
   }
 
-  updateChart($event: any) {
-
-  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
