@@ -44,7 +44,7 @@ import {MatListModule} from '@angular/material/list';
     HttpClientModule,
     NgxChartsModule,
     MatToolbarModule,
-    GoogleChartsModule.forRoot('AIzaSyCdlCJHpBbmAvm7wgRmzFypgN4gvgD2dOA'),
+    GoogleChartsModule.forRoot(''),
     MatProgressSpinnerModule,
     MatTooltipModule,
     MatSnackBarModule,
