@@ -99,9 +99,11 @@ export class GlobeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     globe.loadPlugin(planetaryjs.plugins.earth({
       topojson: {file: '../../../assets/world-110m.json'},
-      oceans: {fill: '#e9e9e9'},
-      land: {fill: '#383838'},
-      borders: {stroke: '#4c4c4c'}
+      oceans: {fill: 'rgba(255, 255, 255, 1)'},
+      land: {fill: 'rgba(116, 116, 116, 0.5)'},
+      // land: {fill: '#38838'},
+      borders: {stroke: 'rgba(116, 116, 116, 1)'}
+      // borders: {stroke: '#4c4c4c'},
     }));
 
     globe.loadPlugin(planetaryjs.plugins.pings());
@@ -119,12 +121,12 @@ export class GlobeComponent implements OnInit, AfterViewInit, OnDestroy {
         // this.plugins.autorotate.resume();
       },
       afterDrag() {
-        this.plugins.autorotate.pause();
+        // this.plugins.autorotate.pause();
       }
     }));
 
     globe.loadPlugin(planetaryjs.plugins.pingMarkers('#rotatingGlobe', {
-      color: 'white',
+      color: 'red',
       angle: 2,
       randomTtl: {
         enabled: true,
