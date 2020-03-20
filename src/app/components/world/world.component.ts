@@ -12,11 +12,6 @@ export class WorldComponent implements OnInit {
 
   showSpinner: boolean;
   @Output() dataTypeToVisualize = new EventEmitter();
-  public chartData: any[];
-
-  public worldData = new WorldData();
-  showChart = true;
-  private countriesData: Country[];
   public innerHeight: number;
   public innerWidth: number;
 
@@ -29,25 +24,7 @@ export class WorldComponent implements OnInit {
 
     this.innerWidth = window.innerWidth;
     this.innerHeight = window.innerHeight;
-
-    this.apiService.getCountriesData().subscribe((res: Country[]) => {
-      this.countriesData = res;
-    });
   }
-
-  setDataToChart(worldData: WorldData) {
-    const chartArray = [];
-    Object.keys(worldData).forEach(key => {
-      const record = {
-        name: WorldLabels[key],
-        value: worldData[key]
-      };
-      chartArray.push(record);
-    });
-    this.chartData = chartArray;
-    return this.chartData;
-  }
-
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {

@@ -1,21 +1,11 @@
 <div class="page">
   <div class="container">
     <div class="spinner-container" *ngIf="showSpinner">
-      <mat-spinner [diameter]="120"></mat-spinner>
+      <mat-progress-spinner [diameter]="120"></mat-progress-spinner>
     </div>
     <div class="container-home">
-
-
       <app-globe [width]="innerWidth" [height]="innerHeight"></app-globe>
-<!--      <div class="element">-->
-<!--        <app-map [dataTypeToVisualize]="dataTypeToVisualize" (showMapWorld)="mapLoaded($event)"></app-map>-->
-<!--      </div>-->
-<!--      <div class="element-chart">-->
-<!--        <div class="aspect-ratio-container">-->
-<!--          <app-number-cards [chartData]="chartData" *ngIf="!showSpinner && showChart"-->
-<!--                            (changeMapData)="updateChart($event)"></app-number-cards>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
   </div>
 </div>
+

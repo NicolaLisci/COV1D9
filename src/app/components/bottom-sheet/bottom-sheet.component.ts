@@ -1,7 +1,5 @@
-import {Component, OnInit, ChangeDetectionStrategy, Inject, OnDestroy} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {MAT_BOTTOM_SHEET_DATA, MatBottomSheetRef} from '@angular/material/bottom-sheet';
-import {Observable} from 'rxjs';
-import {Daily, DailyLabel} from '../../models/italy/daily-model';
 
 @Component({
   selector: 'app-bottom-sheet',

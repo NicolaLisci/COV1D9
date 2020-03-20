@@ -1,8 +1,13 @@
 {
   "extends": "./tsconfig.json",
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["jquery"]
+    "types": [
+      "jquery"
+    ]
   },
   "files": [
     "src/main.ts",

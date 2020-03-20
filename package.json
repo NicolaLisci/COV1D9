@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "buildProd": "ng build --prod",
-    "buildDeploy": "ng build --prod&& firebase deploy",
+    "buildProd": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=true",
+    "buildDeploy": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=all && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
