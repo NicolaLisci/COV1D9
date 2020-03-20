@@ -42,9 +42,6 @@ export class GlobeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public onClick = new EventEmitter();
 
-  // "lat": 41.8719,
-  // "long": 12.5674,
-
   constructor(
     private zone: NgZone,
     private apiService: ApiService,

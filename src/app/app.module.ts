@@ -25,7 +25,6 @@ import {WorldComponent} from './components/world/world.component';
 import {GlobeComponent} from './components/globe/globe.component';
 import {BottomSheetComponent} from './components/bottom-sheet/bottom-sheet.component';
 import {MatListModule} from '@angular/material/list';
-import {LoadCirclePipe} from './pipes/load-circle.pipe';
 import {NgCircleProgressModule} from 'ng-circle-progress';
 
 @NgModule({
@@ -38,7 +37,6 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
     WorldComponent,
     GlobeComponent,
     BottomSheetComponent,
-    LoadCirclePipe,
   ],
   imports: [
     BrowserModule,

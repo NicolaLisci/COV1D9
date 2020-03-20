@@ -2,13 +2,14 @@
 
 [DEMO](https://cov1d9.firebaseapp.com/)
 
-Angular App to monitor COVID-19 virus in italy
+Angular PWA to monitor COVID-19 virus
 
-This App use [COVID19Feed2Json](https://github.com/alessiodl/COVID19Feed2Json) API
-
-All information comes from [Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri](http://www.protezionecivile.gov.it/)
+All information comes from [COVID-19 API Github](https://github.com/mathdroid/covid-19-api)
 
 
+The globe is build using [Planetary.js](http://planetaryjs.com/) and custom plugins
+
+The number cards comes from [ngx-charts](https://github.com/swimlane/ngx-charts)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
