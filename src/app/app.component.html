@@ -1,7 +1,10 @@
 <mat-toolbar class="mat-toolbar-container">
   <mat-toolbar-row class="mat-toolbar-row">
     <span class="title">COV1D9</span>
-    <button mat-flat-button *ngIf="pwaService.promptEvent" (click)="installPwa()" >Installa</button>
+    <button mat-flat-button *ngIf="pwaService.promptEvent" (click)="installPwa()">Installa</button>
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="container" *ngIf="showInstructions" (click)="dismissInstructions()">
+  <app-instructions></app-instructions>
+</div>
 <router-outlet></router-outlet>

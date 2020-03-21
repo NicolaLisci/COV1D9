@@ -10,14 +10,14 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {PwaService} from './services/pwa.service';
 import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-import {GlobeComponent} from './components/globe/globe.component';
 import {WorldModule} from './components/world/world.module';
+import {MatCardModule} from '@angular/material/card';
+import { InstructionsComponent } from './components/instructions/instructions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    InstructionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,8 @@ import {WorldModule} from './components/world/world.module';
     MatToolbarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     MatButtonModule,
-    WorldModule
+    WorldModule,
+    MatCardModule
   ],
   providers: [
     DatePipe,

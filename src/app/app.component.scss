@@ -35,6 +35,10 @@
   margin: 2%;
 }
 
+.container{
+  display: flex;
+  justify-content: center;
+}
 
 ::ng-deep {
   .mat-toolbar {
@@ -42,3 +46,5 @@
   }
 
 }
+
+

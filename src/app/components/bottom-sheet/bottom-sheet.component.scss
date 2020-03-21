@@ -1,10 +1,14 @@
 ::ng-deep {
-
   @media screen and (max-width: 600px) {
     .mat-bottom-sheet-container {
       min-height: 30vh !important;
       min-width: 100vw !important;
     }
+  }
+  .mat-bottom-sheet-container {
+    min-height: 20vh !important;
+    max-height: 50vh !important;
+    min-width: 80vw !important;
   }
 
 
@@ -22,3 +26,4 @@
   position: relative;
   top: -10px;
 }
+

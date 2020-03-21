@@ -1,4 +1,4 @@
-import {AfterViewChecked, ChangeDetectionStrategy, Component, DoCheck, Inject, OnInit} from '@angular/core';
+import {AfterViewChecked, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, Inject, OnInit} from '@angular/core';
 import {PwaService} from './services/pwa.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {DOCUMENT} from '@angular/common';
@@ -14,15 +14,23 @@ declare function addToHomescreen();
 })
 export class AppComponent implements OnInit, AfterViewChecked {
   title = 'COV1D9';
+  public showInstructions: boolean;
 
   constructor(
     public pwaService: PwaService,
     private matSnackBar: MatSnackBar,
+    private changeDetectorRef: ChangeDetectorRef,
     @Inject(DOCUMENT) private document: Document
   ) {
   }
 
   ngOnInit(): void {
+    this.showInstructions = true;
+    // setTimeout(() => {
+    //   this.showInstructions = false;
+    //   this.changeDetectorRef.detectChanges();
+    // }, 10000);
+
     addToHomescreen();
     if (this.pwaService.promptEvent) {
       this.matSnackBar.open('Installa l\'app per un\' esperienza migliore', 'Installa');
@@ -44,4 +52,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  dismissInstructions() {
+    this.showInstructions = false;
+    this.changeDetectorRef.detectChanges();
+  }
 }
