@@ -1,0 +1,120 @@
+{
+  "configVersion": 1,
+  "timestamp": 1584815386488,
+  "index": "=https://nicolalisci.github.io/COV1D9/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "=https://nicolalisci.github.io/COV1D9/index.html",
+        "=https://nicolalisci.github.io/COV1D9/main.ebcb9b5bbc30fd021eb4.js",
+        "=https://nicolalisci.github.io/COV1D9/manifest.webmanifest",
+        "=https://nicolalisci.github.io/COV1D9/polyfills.0b07de152da28aa63392.js",
+        "=https://nicolalisci.github.io/COV1D9/runtime.689ba4fd6cadb82c1ac2.js",
+        "=https://nicolalisci.github.io/COV1D9/scripts.60b476fdaac15b2f67a6.js"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.css",
+        "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.js",
+        "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.min.js",
+        "=https://nicolalisci.github.io/COV1D9/assets/cov1d-icon-app.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/cov1d9.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-144x144.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-192x192.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-36x36.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-48x48.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-72x72.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-96x96.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-114x114.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-120x120.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-144x144.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-152x152.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-180x180.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-57x57.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-60x60.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-72x72.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-76x76.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-precomposed.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-16x16.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-32x32.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-96x96.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon.ico",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-144x144.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-150x150.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-310x310.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-70x70.png",
+        "=https://nicolalisci.github.io/COV1D9/assets/world-110m.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-freshness",
+      "patterns": [
+        "https:\\/\\/cov1d9\\.firebaseapp\\.com"
+      ],
+      "strategy": "freshness",
+      "maxSize": 5,
+      "maxAge": 3600000,
+      "timeoutMs": 3000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.css": "ef4d18cf9ae4e5a09637baeeebf3ffb52e16e98f",
+    "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.js": "72e4f444fdb6df5e4a15451404c6946b7f14853f",
+    "=https://nicolalisci.github.io/COV1D9/assets/addtohomescreen.min.js": "509514765aa8b9ce00f5d5bb045d75a428e4a791",
+    "=https://nicolalisci.github.io/COV1D9/assets/cov1d-icon-app.png": "59152e8c2fefff342a149df2ae46b53408971665",
+    "=https://nicolalisci.github.io/COV1D9/assets/cov1d9.png": "34d3cd205ef969ef1a2445b7d8637a23b8f3eb6f",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-144x144.png": "0df53445c82b1f8a7571155a56aa8116e1915d89",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-192x192.png": "02c61b841814f1fe5f16d06ea3969c378a046400",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-36x36.png": "eacfe47ddea09bc7c7baa77cdb104db6b892bb1c",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-48x48.png": "017bd31e463935c2532ca2a3d650deb7b2b6bbad",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-72x72.png": "42557a5c702b5825360e2820a389247294c5e070",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/android-icon-96x96.png": "b1170ca82d5c8f590e9c6a044c99e9130c5531f6",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-114x114.png": "dd0ca04a353425042b09cb5a3cb4bfa0ac737fc1",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-120x120.png": "f33bf2094dda52bc12086b88a2b30e75c2518a7a",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-144x144.png": "0df53445c82b1f8a7571155a56aa8116e1915d89",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-152x152.png": "f5541b68d1ecaa6247e055deb9c0189400fa6f38",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-180x180.png": "35a66d12791b24b8c0715064e01b9ae72c8e996d",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-57x57.png": "350c03325d61b3ce0db74749fbd36703412b5484",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-60x60.png": "fcc8c99faaf238dfbe6983c3e83e674f69d3b1de",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-72x72.png": "42557a5c702b5825360e2820a389247294c5e070",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-76x76.png": "d77b4319257283ce302db859dfccc622cca758b9",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon-precomposed.png": "e16b7ef529dfe9827d3d23b1acf58950e5f9ba85",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/apple-icon.png": "e16b7ef529dfe9827d3d23b1acf58950e5f9ba85",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-16x16.png": "2ea631ee06010412b0787c05986f624063d72679",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-32x32.png": "1c75f99367acba5114765e4c8fb058e74415b30e",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon-96x96.png": "b1170ca82d5c8f590e9c6a044c99e9130c5531f6",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/favicon.ico": "c4cd30cf658f5702533d0bc449e4f9c0b8971049",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-144x144.png": "0df53445c82b1f8a7571155a56aa8116e1915d89",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-150x150.png": "bad782ebc3b0d1c79f001cdebc849ac4c6ea3637",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-310x310.png": "9f7f79b5e8a127cfa7d20ebe12e764b96412426c",
+    "=https://nicolalisci.github.io/COV1D9/assets/icons/ms-icon-70x70.png": "bc1cc886ee3bc43a0009953d8a5196768712f272",
+    "=https://nicolalisci.github.io/COV1D9/assets/world-110m.json": "40e16a8500b77092afb50f4eaa02a4e63735f77e",
+    "=https://nicolalisci.github.io/COV1D9/index.html": "60b0e70633de3fc5cc7c87e640c8d30ad338f0aa",
+    "=https://nicolalisci.github.io/COV1D9/main.ebcb9b5bbc30fd021eb4.js": "74e6afa6386b68ae08ef1c98a75dbe7e1be6c269",
+    "=https://nicolalisci.github.io/COV1D9/manifest.webmanifest": "5758ce878f63e0cd2c008bd55d34177e88d9e8cc",
+    "=https://nicolalisci.github.io/COV1D9/polyfills.0b07de152da28aa63392.js": "753bb81c574d9dbc62fd5c4c135830394d988370",
+    "=https://nicolalisci.github.io/COV1D9/runtime.689ba4fd6cadb82c1ac2.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "=https://nicolalisci.github.io/COV1D9/scripts.60b476fdaac15b2f67a6.js": "c1443e84615332b961fb0b815cdb8aa3985a1b45"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    }
+  ]
+}
