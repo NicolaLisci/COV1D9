@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "buildProd": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=true",
-    "buildDeploy": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=all && firebase deploy",
+    "buildDeployFirebase": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=all && firebase deploy",
+    "buildDeployGithub": "ng build --prod --aot=true --buildOptimizer=true --optimization=true --outputHashing=all ng build –base-href=” https://.github.io/respository-name/”",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
