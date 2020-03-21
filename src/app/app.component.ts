@@ -26,10 +26,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.showInstructions = true;
-    // setTimeout(() => {
-    //   this.showInstructions = false;
-    //   this.changeDetectorRef.detectChanges();
-    // }, 10000);
+    setTimeout(() => {
+      this.showInstructions = false;
+      this.changeDetectorRef.detectChanges();
+    }, 8000);
 
     addToHomescreen();
     if (this.pwaService.promptEvent) {

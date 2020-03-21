@@ -9,15 +9,17 @@
       color: white !important;
     }
 
-    rect{
+    rect {
       border: solid 3px white;
     }
   }
 }
 
-.aspect-ratio-container {
-  width: 100% !important;
-  height: 300px;
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .aspect-ratio-container {
+    width: 100% !important;
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -26,4 +28,9 @@
     height: 500px;
     margin-left: 2%;
   }
+}
+
+.aspect-ratio-container {
+  width: 100% !important;
+  height: 300px;
 }

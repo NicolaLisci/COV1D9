@@ -19,7 +19,6 @@ body {
     stroke: white;
   }
 
-
 }
 
 .full-width {
@@ -56,3 +55,76 @@ body {
 .material-icons.md-72 {
   font-size: 72px;
 }
+
+
+.instructions {
+  color: black;
+  font-size: 18px;
+  padding-left: 16px;
+}
+
+.instructions-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-card {
+  padding: 5px !important;
+}
+
+// iPad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .instructions {
+    color: black;
+    font-size: 30px !important;
+  }
+}
+
+.title {
+  color: white;
+  font-size: 60px;
+}
+
+
+.page {
+  background: #172142;
+}
+
+@media screen and (max-width: 600px) {
+  .mat-toolbar-container {
+    height: 50px !important;
+    padding: 1%;
+    margin: 2%;
+  }
+  .title {
+    color: white;
+    font-size: 60px;
+  }
+}
+
+.mat-toolbar-container {
+  height: 30px !important;
+  margin: 1%;
+}
+
+
+.mat-toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  margin: 2%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
