@@ -4,7 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DatePipe} from '@angular/common';
+import {DatePipe, HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
@@ -32,7 +32,8 @@ import { InstructionsComponent } from './components/instructions/instructions.co
   ],
   providers: [
     DatePipe,
-    PwaService
+    PwaService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
