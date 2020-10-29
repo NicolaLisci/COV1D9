@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "COV1D9"
+  "defaultProject": "COV1D9",
+  "cli": {
+    "analytics": "9668d5dc-bc23-4c0d-b728-cea1c7b26318"
+  }
 }
